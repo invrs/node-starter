@@ -15,7 +15,7 @@ Inverse best practices for new Node projects.
 
 ```bash
 git clone git@github.com:invrs/node-starter.git [PROJECT]
-cd project-name
+cd [PROJECT]
 rm -rf .git && git init .
 git remote add origin git@github.com:invrs/[PROJECT].git
 ```
