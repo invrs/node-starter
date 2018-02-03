@@ -2,11 +2,7 @@
   "name": "node-starter",
   "version": "0.0.1",
   "description": "Node.js starter project",
-  "keywords": [
-    "boilerplate",
-    "nodejs",
-    "starter"
-  ],
+  "keywords": ["boilerplate", "nodejs", "starter"],
   "author": "Inverse Labs <labs@inverse.com>",
   "repository": {
     "type": "git",
@@ -14,7 +10,8 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
-  "homepage": "https://github.com/invrs/node-starter#readme",
+  "homepage":
+    "https://github.com/invrs/node-starter#readme",
   "scripts": {
     "build": "babel lib --out-dir dist",
     "fix": "npm run lint -- --fix",
@@ -27,23 +24,20 @@
   "devDependencies": {
     "babel-cli": "6",
     "babel-core": "6",
-    "babel-loader": "7",
     "babel-plugin-transform-async-to-generator": "6",
     "babel-plugin-transform-object-rest-spread": "6",
     "babel-preset-node6": "11",
     "eslint": "4",
     "eslint-config-prettier": "2",
     "eslint-plugin-prettier": "2",
-    "husky": "0.15.0-rc.*",
+    "husky": "^0.15.0-rc.3",
     "jest": "22",
     "lint-staged": "6",
     "prettier": "1"
   },
   "dependencies": {},
   "babel": {
-    "presets": [
-      "node6"
-    ],
+    "presets": ["node6"],
     "plugins": [
       "transform-async-to-generator",
       "transform-object-rest-spread"
@@ -67,31 +61,16 @@
     },
     "rules": {
       "curly": "error",
-      "indent": [
-        "error",
-        2
-      ],
-      "linebreak-style": [
-        "error",
-        "unix"
-      ],
+      "indent": ["error", 2],
+      "linebreak-style": ["error", "unix"],
       "no-console": [
         "error",
         {
-          "allow": [
-            "warn",
-            "error"
-          ]
+          "allow": ["warn", "error"]
         }
       ],
-      "quotes": [
-        "error",
-        "double"
-      ],
-      "semi": [
-        "error",
-        "never"
-      ],
+      "quotes": ["error", "double"],
+      "semi": ["error", "never"],
       "sort-keys": [
         "error",
         "asc",
@@ -114,10 +93,7 @@
     }
   },
   "lint-staged": {
-    "*.{css,json,md}": [
-      "prettier --write",
-      "git add"
-    ],
+    "*.{css,json,md}": ["prettier --write", "git add"],
     "*.js": [
       "eslint --ignore-path .gitignore --fix",
       "git add"
