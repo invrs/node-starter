@@ -1,4 +1,4 @@
-import { task } from "../lib"
+import { task } from "../dist"
 
 test("without parameters", () => {
   expect.assertions(1)
