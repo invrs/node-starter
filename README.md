@@ -2,6 +2,8 @@
 
 Inverse best practices for new Node projects.
 
+![clone->kill](http://i.imgur.com/tW19j.gif)
+
 | Feature                                                                                                                                                                             | Usage                                                                                               |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
 | Babel build with [async/await](https://babeljs.io/docs/plugins/transform-async-to-generator) and [object rest/spread](https://babeljs.io/docs/plugins/transform-object-rest-spread) | `npm run build`                                                                                     |
