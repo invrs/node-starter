@@ -1,6 +1,7 @@
 var path = require("path")
 
 module.exports = {
+  devtool: "nosources-source-map",
   entry: path.join(__dirname, "lib/index.js"),
   externals: [],
   module: {
