@@ -2,13 +2,13 @@
 
 Inverse best practices for new Node projects.
 
-| Feature                                             | Usage                                                                                               |
-| --------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| Babel build (w/ async/await and object rest/spread) | `npm run build`                                                                                     |
-| ESLint on JS (w/ prettier)                          | `npm run lint` and `npm run fix`                                                                    |
-| Prettier on css, json, md                           | `npm run pretty`                                                                                    |
-| Jest testing                                        | `npm test`                                                                                          |
-| Pre-commit pretty, fix, and test                    | [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) |
+| Feature                                                                                                                                                                             | Usage                                                                                               |
+| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Babel build with [async/await](https://babeljs.io/docs/plugins/transform-async-to-generator) and [object rest/spread](https://babeljs.io/docs/plugins/transform-object-rest-spread) | `npm run build`                                                                                     |
+| ESLint on JS with prettier                                                                                                                                                          | `npm run lint` and `npm run fix`                                                                    |
+| Prettier on css, json, md                                                                                                                                                           | `npm run pretty`                                                                                    |
+| Jest testing                                                                                                                                                                        | `npm test`                                                                                          |
+| Pre-commit pretty, fix, and test                                                                                                                                                    | [husky](https://github.com/typicode/husky) and [lint-staged](https://github.com/okonet/lint-staged) |
 
 ## Start a project
 
