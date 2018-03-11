@@ -24,12 +24,15 @@
   "devDependencies": {
     "babel-cli": "6",
     "babel-core": "6",
+    "babel-eslint": "8",
     "babel-plugin-transform-async-to-generator": "6",
     "babel-plugin-transform-object-rest-spread": "6",
     "babel-preset-node6": "11",
     "eslint": "4",
     "eslint-config-prettier": "2",
     "eslint-plugin-prettier": "2",
+    "eslint-plugin-react": "7",
+    "fxtr": "1",
     "husky": "^0.15.0-rc.3",
     "jest": "22",
     "lint-staged": "6",
@@ -45,13 +48,16 @@
   },
   "eslintConfig": {
     "env": {
+      "browser": true,
       "es6": true,
       "node": true
     },
     "extends": [
       "eslint:recommended",
-      "plugin:prettier/recommended"
+      "plugin:prettier/recommended",
+      "plugin:react/recommended"
     ],
+    "parser": "babel-eslint",
     "parserOptions": {
       "ecmaFeatures": {
         "experimentalObjectRestSpread": true
@@ -63,6 +69,14 @@
       "curly": "error",
       "indent": ["error", 2],
       "linebreak-style": ["error", "unix"],
+      "max-len": [
+        "error",
+        {
+          "code": 60,
+          "ignoreRegExpLiterals": true,
+          "ignoreStrings": true
+        }
+      ],
       "no-console": [
         "error",
         {
@@ -70,6 +84,10 @@
         }
       ],
       "quotes": ["error", "double"],
+      "react/display-name": "off",
+      "react/no-find-dom-node": "off",
+      "react/prop-types": "off",
+      "react/react-in-jsx-scope": "off",
       "semi": ["error", "never"],
       "sort-keys": [
         "error",
@@ -84,13 +102,18 @@
         {
           "ignoreCase": true
         }
-      ]
+      ],
+      "strict": 0
     }
   },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged && npm test"
     }
+  },
+  "jest": {
+    "setupFiles": ["./test/setup.js"],
+    "testMatch": ["**/*Test.js"]
   },
   "lint-staged": {
     "*.{css,json,md}": ["prettier --write", "git add"],
