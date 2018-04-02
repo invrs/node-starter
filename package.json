@@ -14,22 +14,22 @@
   "homepage":
     "https://github.com/invrs/node-starter#readme",
   "scripts": {
-    "build":
-      "rimraf dist; babel lib --out-dir dist --source-maps",
+    "build": "next build",
+    "dev": "node server.js",
+    "export": "next export",
     "fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
     "pretty": "prettier --write **/*.css **/*.json **/*.md",
     "lint": "eslint --ignore-path .gitignore --ext=js .",
+    "start": "NODE_ENV=production node server.js",
     "test": "jest test"
   },
   "devDependencies": {
     "babel-cli": "6",
     "babel-core": "6",
     "babel-eslint": "8",
-    "babel-plugin-transform-async-to-generator": "6",
-    "babel-plugin-transform-object-rest-spread": "6",
-    "babel-preset-node6": "11",
+    "babel-plugin-styled-components": "1",
     "eslint": "4",
     "eslint-config-prettier": "2",
     "eslint-plugin-prettier": "2",
@@ -41,13 +41,40 @@
     "prettier": "1",
     "rimraf": "2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "4",
+    "next": "4",
+    "next-routes": "1",
+    "react": "16",
+    "react-dom": "16",
+    "recompose": "0.26",
+    "styled-components": "3"
+  },
   "babel": {
-    "presets": ["node6"],
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "modules": "commonjs"
+            }
+          ],
+          "next/babel"
+        ]
+      }
+    },
     "plugins": [
-      "transform-async-to-generator",
-      "transform-object-rest-spread"
-    ]
+      [
+        "styled-components",
+        {
+          "ssr": true,
+          "displayName": true,
+          "preprocess": false
+        }
+      ]
+    ],
+    "presets": ["next/babel"]
   },
   "eslintConfig": {
     "env": {
