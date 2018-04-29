@@ -3,7 +3,11 @@
   "private": true,
   "version": "0.0.1",
   "description": "Node.js starter project",
-  "keywords": ["boilerplate", "nodejs", "starter"],
+  "keywords": [
+    "boilerplate",
+    "nodejs",
+    "starter"
+  ],
   "author": "Inverse Labs <labs@inverse.com>",
   "repository": {
     "type": "git",
@@ -11,11 +15,9 @@
   },
   "license": "MIT",
   "main": "dist/index.js",
-  "homepage":
-    "https://github.com/invrs/node-starter#readme",
+  "homepage": "https://github.com/invrs/node-starter#readme",
   "scripts": {
-    "build":
-      "rimraf dist; babel lib --out-dir dist --source-maps",
+    "build": "rimraf dist; babel lib --out-dir dist --source-maps",
     "fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
@@ -30,110 +32,17 @@
     "babel-plugin-transform-async-to-generator": "6",
     "babel-plugin-transform-object-rest-spread": "6",
     "babel-preset-node6": "11",
-    "eslint": "^4.19.1",
-    "eslint-config-prettier": "2",
-    "eslint-plugin-prettier": "2",
-    "eslint-plugin-react": "7",
     "fxtr": "1",
-    "husky": "^1.0.0-rc.2",
     "jest": "^22.4.3",
-    "lint-staged": "^6.1.1",
-    "prettier": "^1.12.1",
     "rimraf": "2"
   },
   "dependencies": {},
-  "babel": {
-    "presets": ["node6"],
-    "plugins": [
-      "transform-async-to-generator",
-      "transform-object-rest-spread"
-    ]
-  },
-  "eslintConfig": {
-    "env": {
-      "browser": true,
-      "es6": true,
-      "node": true
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:prettier/recommended",
-      "plugin:react/recommended"
-    ],
-    "parser": "babel-eslint",
-    "parserOptions": {
-      "ecmaFeatures": {
-        "experimentalObjectRestSpread": true
-      },
-      "ecmaVersion": 8,
-      "sourceType": "module"
-    },
-    "rules": {
-      "curly": "error",
-      "indent": [
-        "error",
-        2,
-        {
-          "SwitchCase": 1
-        }
-      ],
-      "linebreak-style": ["error", "unix"],
-      "max-len": [
-        "error",
-        {
-          "code": 60,
-          "ignoreRegExpLiterals": true,
-          "ignoreStrings": true
-        }
-      ],
-      "no-console": [
-        "error",
-        {
-          "allow": ["warn", "error"]
-        }
-      ],
-      "quotes": ["error", "double"],
-      "react/display-name": "off",
-      "react/no-find-dom-node": "off",
-      "react/prop-types": "off",
-      "react/react-in-jsx-scope": "off",
-      "semi": ["error", "never"],
-      "sort-keys": [
-        "error",
-        "asc",
-        {
-          "caseSensitive": true,
-          "natural": false
-        }
-      ],
-      "sort-vars": [
-        "error",
-        {
-          "ignoreCase": true
-        }
-      ],
-      "strict": 0
-    }
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && npm test"
-    }
-  },
   "jest": {
-    "setupFiles": ["./test/setup.js"],
-    "testMatch": ["**/*Test.js"]
-  },
-  "lint-staged": {
-    "*.{css,json,md}": ["prettier --write", "git add"],
-    "*.js": [
-      "eslint --ignore-path .gitignore --fix",
-      "git add"
+    "setupFiles": [
+      "./test/setup.js"
+    ],
+    "testMatch": [
+      "**/*Test.js"
     ]
-  },
-  "prettier": {
-    "printWidth": 60,
-    "semi": false,
-    "trailingComma": "es5"
   }
 }
