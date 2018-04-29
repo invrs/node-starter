@@ -29,9 +29,9 @@
     "babel-cli": "6",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.3",
-    "babel-plugin-transform-async-to-generator": "6",
-    "babel-plugin-transform-object-rest-spread": "6",
-    "babel-preset-node6": "11",
+    "babel-plugin-styled-components": "^1.5.1",
+    "enzyme": "3",
+    "enzyme-adapter-react-16": "1",
     "fxtr": "1",
     "jest": "^22.4.3",
     "rimraf": "2"
