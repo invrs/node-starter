@@ -17,12 +17,15 @@
   "main": "dist/index.js",
   "homepage": "https://github.com/invrs/node-starter#readme",
   "scripts": {
-    "build": "rimraf dist; babel lib --out-dir dist --source-maps",
+    "build": "next build",
+    "dev": "node server.js",
+    "export": "next export",
     "fix": "npm run lint -- --fix",
     "prepublishOnly": "npm run build",
     "pretest": "npm run build",
     "pretty": "prettier --write **/*.css **/*.json **/*.md",
     "lint": "eslint --ignore-path .gitignore --ext=js .",
+    "start": "NODE_ENV=production node server.js",
     "test": "jest test"
   },
   "devDependencies": {
