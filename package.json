@@ -39,7 +39,43 @@
     "jest": "^22.4.3",
     "rimraf": "2"
   },
-  "dependencies": {},
+  "dependencies": {
+    "express": "4",
+    "next": "4",
+    "next-routes": "1",
+    "react": "16",
+    "react-dom": "16",
+    "recompose": "0.26",
+    "styled-components": "3"
+  },
+  "babel": {
+    "plugins": [
+      [
+        "babel-plugin-styled-components",
+        {
+          "ssr": true,
+          "displayName": true,
+          "preprocess": false
+        }
+      ]
+    ],
+    "presets": [
+      "next/babel"
+    ],
+    "env": {
+      "test": {
+        "presets": [
+          [
+            "env",
+            {
+              "modules": "commonjs"
+            }
+          ],
+          "next/babel"
+        ]
+      }
+    }
+  },
   "jest": {
     "setupFiles": [
       "./test/setup.js"
