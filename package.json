@@ -35,7 +35,7 @@
     "eslint-plugin-prettier": "2",
     "eslint-plugin-react": "7",
     "fxtr": "1",
-    "husky": "^0.15.0-rc.13",
+    "husky": "^1.0.0-rc.2",
     "jest": "^22.4.3",
     "lint-staged": "^6.1.1",
     "prettier": "^1.12.1",
